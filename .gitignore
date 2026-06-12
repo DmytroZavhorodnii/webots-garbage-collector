@@ -1,0 +1,9 @@
+build/
+*.o
+*.mp4
+controllers/zbieracz_rl_v4/zbieracz_rl_v4
+*.pdf
+*.txt
+map_viewer.py
+Wykład 10/
+Wykład 11/

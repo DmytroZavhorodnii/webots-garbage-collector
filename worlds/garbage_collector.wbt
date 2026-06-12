@@ -1,0 +1,346 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+
+WorldInfo {
+  info [
+    "Robot zbierajacy smieci"
+  ]
+  title "Garbage Collector"
+  basicTimeStep 32
+  northDirection 0 1 0
+}
+Viewpoint {
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position 0 0 3.5
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+  floorTileSize 0.5 0.5
+  wallHeight 0.1
+}
+DEF BAZA Solid {
+  translation -0.8 -0.8 0.001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.8 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.002
+      }
+    }
+  ]
+  name "baza"
+}
+DEF SMIEC_1 Solid {
+  translation 0.5 0.5 0.04
+  children [
+    DEF SMIEC_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.3 0
+        roughness 0.5
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.04
+      }
+    }
+  ]
+  name "smiec_1"
+  boundingObject USE SMIEC_SHAPE
+  physics Physics {
+    density 100
+  }
+}
+DEF SMIEC_2 Solid {
+  translation -0.3 0.6 0.04
+  children [
+    DEF SMIEC_SHAPE_2 Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.3 0
+        roughness 0.5
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.04
+      }
+    }
+  ]
+  name "smiec_2"
+  boundingObject USE SMIEC_SHAPE_2
+  physics Physics {
+    density 100
+  }
+}
+DEF SMIEC_3 Solid {
+  translation 0.2 -0.5 0.04
+  children [
+    DEF SMIEC_SHAPE_3 Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.3 0
+        roughness 0.5
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.04
+      }
+    }
+  ]
+  name "smiec_3"
+  boundingObject USE SMIEC_SHAPE_3
+  physics Physics {
+    density 100
+  }
+}
+DEF SMIEC_4 Solid {
+  translation -0.6 0.2 0.04
+  children [
+    DEF SMIEC_SHAPE_4 Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.3 0
+        roughness 0.5
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.04
+      }
+    }
+  ]
+  name "smiec_4"
+  boundingObject USE SMIEC_SHAPE_4
+  physics Physics {
+    density 100
+  }
+}
+DEF SMIEC_5 Solid {
+  translation 0.7 -0.2 0.04
+  children [
+    DEF SMIEC_SHAPE_5 Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.3 0
+        roughness 0.5
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.04
+      }
+    }
+  ]
+  name "smiec_5"
+  boundingObject USE SMIEC_SHAPE_5
+  physics Physics {
+    density 100
+  }
+}
+Solid {
+  translation 0.6 0.5 0.1
+  children [
+    DEF OBS4 Shape {
+      appearance PBRAppearance { baseColor 0.3 0.1 0.0 roughness 1 metalness 0 }
+      geometry Box { size 0.15 0.15 0.2 }
+    }
+  ]
+  name "obstacle_4"
+  boundingObject USE OBS4
+}
+Solid {
+  translation -0.5 -0.2 0.1
+  children [
+    DEF OBS5 Shape {
+      appearance PBRAppearance { baseColor 0.3 0.1 0.0 roughness 1 metalness 0 }
+      geometry Box { size 0.15 0.15 0.2 }
+    }
+  ]
+  name "obstacle_5"
+  boundingObject USE OBS5
+}
+Solid {
+  translation 0.5 -0.5 0.1
+  children [
+    DEF OBS6 Shape {
+      appearance PBRAppearance { baseColor 0.3 0.1 0.0 roughness 1 metalness 0 }
+      geometry Box { size 0.15 0.15 0.2 }
+    }
+  ]
+  name "obstacle_6"
+  boundingObject USE OBS6
+}
+Solid {
+  translation 0.4 0.0 0.1
+  children [
+    DEF OBS1 Shape {
+      appearance PBRAppearance { baseColor 0.4 0.2 0.0 roughness 1 metalness 0 }
+      geometry Box { size 0.15 0.15 0.2 }
+    }
+  ]
+  name "obstacle_1"
+  boundingObject USE OBS1
+}
+Solid {
+  translation -0.3 0.5 0.1
+  children [
+    DEF OBS2 Shape {
+      appearance PBRAppearance { baseColor 0.4 0.2 0.0 roughness 1 metalness 0 }
+      geometry Box { size 0.15 0.15 0.2 }
+    }
+  ]
+  name "obstacle_2"
+  boundingObject USE OBS2
+}
+Solid {
+  translation 0.0 -0.5 0.1
+  children [
+    DEF OBS3 Shape {
+      appearance PBRAppearance { baseColor 0.4 0.2 0.0 roughness 1 metalness 0 }
+      geometry Box { size 0.15 0.15 0.2 }
+    }
+  ]
+  name "obstacle_3"
+  boundingObject USE OBS3
+}
+Robot {
+  translation 0 0 0.05
+  children [
+    DEF BODY Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.8
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.15 0.08
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.05 0.08 -0.03
+      }
+      device [
+        RotationalMotor {
+          name "left wheel motor"
+          maxVelocity 10
+        }
+        PositionSensor {
+          name "left encoder"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 0.09 -0.03
+        rotation 1 0 0 1.5708
+        children [
+          DEF WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.03
+              radius 0.05
+            }
+          }
+        ]
+        name "left wheel"
+        boundingObject USE WHEEL
+        physics Physics {
+          density 500
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.05 -0.08 -0.03
+      }
+      device [
+        RotationalMotor {
+          name "right wheel motor"
+          maxVelocity 10
+        }
+        PositionSensor {
+          name "right encoder"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 -0.09 -0.03
+        rotation 1 0 0 1.5708
+        children [
+          DEF WHEEL_R Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.03
+              radius 0.05
+            }
+          }
+        ]
+        name "right wheel"
+        boundingObject USE WHEEL_R
+        physics Physics {
+          density 500
+        }
+      }
+    }
+    DistanceSensor {
+      translation 0.1 0.04 0
+      rotation 0 0 1 0.3
+      name "ds_left"
+      numberOfRays 3
+      aperture 0.5
+    }
+    DistanceSensor {
+      translation 0.1 0 0
+      rotation 0 0 1 0
+      name "ds_center"
+      numberOfRays 3
+      aperture 0.3
+    }
+    DistanceSensor {
+      translation 0.1 -0.04 0
+      rotation 0 0 1 -0.3
+      name "ds_right"
+      numberOfRays 3
+      aperture 0.5
+    }
+    Lidar {
+      translation 0 0 0.05
+      name "lidar"
+      horizontalResolution 360
+      fieldOfView 6.28318
+      numberOfLayers 1
+      minRange 0.1
+      maxRange 1.5
+    }
+    GPS {
+      name "gps"
+    }
+    Compass {
+      name "compass"
+    }
+    Display {
+      name "map_display"
+      width 320
+      height 320
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+    density 500
+  }
+  controller "zbieracz_rl_v4"
+  supervisor TRUE
+  name "collector_robot"
+}
