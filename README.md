@@ -10,7 +10,7 @@ Robot autonomicznie zbiera 5 obiektów (śmieci) rozrzuconych po arenie 2×2m i 
 
 ## Algorytmy
 
-### Wykład 10 — Sterownik P (kinematyka różniczkowa)
+### Sterownik P (kinematyka różniczkowa)
 
 Dwukołowy robot różniczkowy sterowany proporcjonalnym regulatorem P:
 
@@ -25,7 +25,7 @@ u₂ = Kp₂ · ε₂               (prędkość kątowa)
 
 Parametry: `Kp₁=2.0`, `Kp₂=5.0`, `R=0.05m`, `r=0.09m`
 
-### Wykład 11 — Agent wnioskujący (reguły reaktywne)
+### Agent wnioskujący (reguły reaktywne)
 
 ```
 W(x,y) ∧ O(x,y)  →  Wykonaj(usuń)           # robot przy śmieciu → zbierz
